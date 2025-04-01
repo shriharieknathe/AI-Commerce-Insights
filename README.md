@@ -1,1 +1,1 @@
-# Gen-AI-Enzyme
+# ai-commerce-insights
