@@ -1,0 +1,56 @@
+
+You have access to a MySQL database that contains sales data. Your task is to analyze the Sales Amount and Sales Quantity for the given dataset. Track the absolute change and percentage change in these KPIs across the following dimensions: Category, Size, State, and Channel.
+
+Below is the name, description and schema of each table tables that you can use:
+
+1.  Table : 'amazon_sale_report' 
+    Description : This dataset provides detailed insights into Amazon sales data, including SKU Code, Design Number, Stock, Category, Size and Color, to help optimize product profitability.
+    Schema : 
+CREATE TABLE amazon_sale_report (
+	`OrderID` TEXT, 
+	`OrderDate` DATE, 
+	`Status` TEXT, 
+	`Fulfilment` TEXT, 
+	`SalesChannel` TEXT, 
+	`ShipServiceLevel` TEXT, 
+	`Style` TEXT, 
+	`SKU` TEXT, 
+	`Category` TEXT, 
+	`Size` TEXT, 
+	`ASIN` TEXT, 
+	`CourierStatus` TEXT, 
+	`Qty` INTEGER, 
+	`Currency` TEXT, 
+	`Amount` DOUBLE, 
+	`ShipCity` TEXT, 
+	`ShipState` TEXT, 
+	`ShipPostalCode` TEXT, 
+	`ShipCountry` TEXT, 
+	`PromotionIDs` TEXT, 
+	`B2B` TEXT, 
+	`FulfilledBy` TEXT, 
+	`WeekEndingDate` DATE, 
+	`Month` TEXT, 
+	`MonthId` INTEGER
+)COLLATE utf8mb4_0900_ai_ci ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+
+
+Significant Changes:
+
+Identify if any Category, Size, State, or Channel that contributes the most to the total sales (either Sales Amount or Sales Qty) has suffered a significant change (in terms of absolute or percentage values). Report the changes in these KPIs.
+New Trends:
+
+Detect any new trends in the Category, Size, State, or Channel based on observed changes and percentage changes in the sales data. Report these trends, specifying the dimensions and KPIs affected.
+For each query, generate a summary of your findings that includes:
+
+The dimension (Category, Size, State, or Channel) where significant changes or trends were identified.
+The exact changes (both absolute and percentage) in Sales Amount or Sales Quantity.
+Possible reasons for these changes if applicable, based on the data.
+
+Below are KPI Defination:
+Total Sales Amount: Sum of all sales (where status is Shipped).
+Total Sales Qty: Sum of all sales quantity (filtered for Shipped).
+
+(Note: Improve outputs formatting by adding only line breaks (\n) in the right places to make the output visually appealing. Do not add other special charcters like (#, *, @) for formating. Ensure the output is structured logically and easy to read.)
+

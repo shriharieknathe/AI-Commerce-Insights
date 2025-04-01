@@ -1,0 +1,141 @@
+
+CREATE TABLE amazon_sale_report (
+	`index` INTEGER, 
+	order_id TEXT, 
+	date DATE, 
+	status TEXT, 
+	fulfilment TEXT, 
+	sales_channel TEXT, 
+	`ship-service-level` TEXT, 
+	style TEXT, 
+	`SKU` TEXT, 
+	category TEXT, 
+	size TEXT, 
+	`ASIN` TEXT, 
+	courier_status TEXT, 
+	qty INTEGER, 
+	currency TEXT, 
+	amount DOUBLE, 
+	`ship-city` TEXT, 
+	`ship-state` TEXT, 
+	`ship-postal-code` INTEGER, 
+	`ship-country` TEXT, 
+	`promotion-ids` TEXT, 
+	`B2B` TEXT, 
+	`fulfilled-by` TEXT, 
+	unnamed TEXT
+)DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB COLLATE utf8mb4_0900_ai_ci
+
+/*
+1 rows from amazon_sale_report table:
+index	order_id	date	status	fulfilment	sales_channel	ship-service-level	style	SKU	category	size	ASIN	courier_status	qty	currency	amount	ship-city	ship-state	ship-postal-code	ship-country	promotion-ids	B2B	fulfilled-by	unnamed
+0	405-8078784-5731545	2022-04-30	Cancelled	Merchant	Amazon.in	Standard	SET389	SET389-KR-NP-S	Set	S	B09KXVBD7Z	None	0	INR	647.6200000000	MUMBAI	MAHARASHTRA	400081	IN	None	False	Easy Ship	None
+*/
+
+
+CREATE TABLE cloud_warehouse_compersion (
+	shipped_by TEXT, 
+	inbound INTEGER, 
+	outbound INTEGER, 
+	storage_fee DOUBLE, 
+	customer_return DOUBLE
+)DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB COLLATE utf8mb4_0900_ai_ci
+
+/*
+2 rows from cloud_warehouse_compersion table:
+shipped_by	inbound	outbound	storage_fee	customer_return
+Shiprocket	4	7	25.0000000000	6.0000000000
+INCREFF	4	11	0.1500000000	15.5000000000
+*/
+
+
+CREATE TABLE customer_sales (
+	`index` INTEGER, 
+	date DATE, 
+	months TEXT, 
+	customer TEXT, 
+	style TEXT, 
+	`SKU` TEXT, 
+	size TEXT, 
+	`PCS` INTEGER, 
+	rate DOUBLE, 
+	gross_amount DOUBLE
+)DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB COLLATE utf8mb4_0900_ai_ci
+
+/*
+1 rows from customer_sales table:
+index	date	months	customer	style	SKU	size	PCS	rate	gross_amount
+0	2021-06-05	Jun-21	REVATHY LOGANATHAN	MEN5004	MEN5004-KR-L	L	1	616.5600000000	617.0000000000
+*/
+
+
+CREATE TABLE p_l_march_2021 (
+	`index` INTEGER, 
+	`SKU` TEXT, 
+	style_id TEXT, 
+	catalog TEXT, 
+	category TEXT, 
+	weight DOUBLE, 
+	`TP_1` DOUBLE, 
+	`TP_2` DOUBLE, 
+	`MRP_old` DOUBLE, 
+	`final_MRP_old` DOUBLE, 
+	`ajio_MRP` DOUBLE, 
+	`amazon_MRP` DOUBLE, 
+	`amazon_FBA_MRP` DOUBLE, 
+	`flipkart_MRP` DOUBLE, 
+	`limeroad_MRP` DOUBLE, 
+	`myntra_MRP` DOUBLE, 
+	`paytm_MRP` DOUBLE, 
+	`snapdeal_MRP` DOUBLE
+)DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB COLLATE utf8mb4_0900_ai_ci
+
+/*
+1 rows from p_l_march_2021 table:
+index	SKU	style_id	catalog	category	weight	TP_1	TP_2	MRP_old	final_MRP_old	ajio_MRP	amazon_MRP	amazon_FBA_MRP	flipkart_MRP	limeroad_MRP	myntra_MRP	paytm_MRP	snapdeal_MRP
+0	Os206_3141_S	Os206_3141	Moments	Kurta	0.3000000000	538.0000000000	435.7800000000	2178.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000
+*/
+
+
+CREATE TABLE p_l_may_2022 (
+	`index` INTEGER, 
+	`SKU` TEXT, 
+	style_id TEXT, 
+	catalog TEXT, 
+	category TEXT, 
+	weight DOUBLE, 
+	`TP` DOUBLE, 
+	`MRP_old` DOUBLE, 
+	`final_MRP_old` DOUBLE, 
+	`ajio_MRP` DOUBLE, 
+	`amazon_MRP` DOUBLE, 
+	`amazon_FBA_MRP` DOUBLE, 
+	`flipkart_MRP` DOUBLE, 
+	`limeroad_MRP` DOUBLE, 
+	`myntra_MRP` DOUBLE, 
+	`paytm_MRP` DOUBLE, 
+	`snapdeal_MRP` DOUBLE
+)DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB COLLATE utf8mb4_0900_ai_ci
+
+/*
+1 rows from p_l_may_2022 table:
+index	SKU	style_id	catalog	category	weight	TP	MRP_old	final_MRP_old	ajio_MRP	amazon_MRP	amazon_FBA_MRP	flipkart_MRP	limeroad_MRP	myntra_MRP	paytm_MRP	snapdeal_MRP
+0	Os206_3141_S	Os206_3141	Moments	Kurta	0.3000000000	538.0000000000	2178.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000	2295.0000000000
+*/
+
+
+CREATE TABLE stock (
+	`index` INTEGER, 
+	`SKU_code` TEXT, 
+	design_no TEXT, 
+	stock INTEGER, 
+	category TEXT, 
+	size TEXT, 
+	color TEXT
+)DEFAULT CHARSET=utf8mb4 ENGINE=InnoDB COLLATE utf8mb4_0900_ai_ci
+
+/*
+1 rows from stock table:
+index	SKU_code	design_no	stock	category	size	color
+0	AN201-RED-L	AN201	5	AN : LEGGINGS	L	Red
+*/

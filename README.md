@@ -1,1 +1,1 @@
-# AI-Commerce-Insights
+# ai-commerce-insights
